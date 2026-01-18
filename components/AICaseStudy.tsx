@@ -7,6 +7,9 @@ import {
     TargetIcon, 
     DatabaseIcon,
     RobotIcon,
+    ModernDatabaseIcon,
+    ModernTroubleshootingIcon,
+    ModernAIIcon,
     IllusLitReview,
     IllusStakeholders,
     IllusPrototypes,
@@ -253,7 +256,7 @@ const AICaseStudy: React.FC<AICaseStudyProps> = ({ onNavigate }) => {
                     {/* Pillar 1: Cloud Databases */}
                     <div className="bg-white border-2 border-slate-900 p-8 shadow-[4px_4px_0px_0px_rgba(8,145,178,1)] flex flex-col group hover:-translate-y-1 transition-transform">
                         <div className="w-12 h-12 bg-cyan-50 border border-cyan-100 flex items-center justify-center mb-6 group-hover:bg-cyan-100 transition-colors">
-                            <DatabaseIcon className="w-6 h-6 text-cyan-600" />
+                            <ModernDatabaseIcon className="w-8 h-8 text-cyan-600" />
                         </div>
                         <h3 className="text-xl font-bold text-slate-900 mb-4 tracking-tight uppercase">Cloud Databases</h3>
                         <p className="text-slate-600 font-light leading-relaxed text-sm">
@@ -264,7 +267,7 @@ const AICaseStudy: React.FC<AICaseStudyProps> = ({ onNavigate }) => {
                     {/* Pillar 2: Troubleshooting */}
                     <div className="bg-white border-2 border-slate-900 p-8 shadow-[4px_4px_0px_0px_rgba(236,72,153,1)] flex flex-col group hover:-translate-y-1 transition-transform">
                         <div className="w-12 h-12 bg-rose-50 border border-rose-100 flex items-center justify-center mb-6 group-hover:bg-rose-100 transition-colors">
-                            <TargetIcon className="w-6 h-6 text-rose-600" />
+                            <ModernTroubleshootingIcon className="w-8 h-8 text-rose-600" />
                         </div>
                         <h3 className="text-xl font-bold text-slate-900 mb-4 tracking-tight uppercase">Troubleshooting</h3>
                         <p className="text-slate-600 font-light leading-relaxed text-sm">
@@ -275,7 +278,7 @@ const AICaseStudy: React.FC<AICaseStudyProps> = ({ onNavigate }) => {
                     {/* Pillar 3: AI */}
                     <div className="bg-white border-2 border-slate-900 p-8 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] flex flex-col group hover:-translate-y-1 transition-transform">
                         <div className="w-12 h-12 bg-slate-100 border border-slate-200 flex items-center justify-center mb-6 group-hover:bg-slate-200 transition-colors">
-                            <RobotIcon className="w-6 h-6 text-slate-900" />
+                            <ModernAIIcon className="w-8 h-8 text-slate-900" />
                         </div>
                         <h3 className="text-xl font-bold text-slate-900 mb-4 tracking-tight uppercase">AI Capabilities</h3>
                         <p className="text-slate-600 font-light leading-relaxed text-sm">

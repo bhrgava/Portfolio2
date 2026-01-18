@@ -19,6 +19,31 @@ export const DatabaseIcon: React.FC<{ className?: string }> = ({ className }) =>
   </svg>
 );
 
+// Modern Animated Database Icon
+export const ModernDatabaseIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <style>
+      {`
+        @keyframes cylinder-pulse {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-1px); }
+        }
+        @keyframes data-flow {
+          0% { stroke-dashoffset: 20; }
+          100% { stroke-dashoffset: 0; }
+        }
+      `}
+    </style>
+    <g style={{ animation: 'cylinder-pulse 3s ease-in-out infinite' }}>
+        <path d="M12 3c-4.97 0-9 1.343-9 3s4.03 3 9 3 9-1.343 9-3-4.03-3-9-3z" fill="white" fillOpacity="0.5" />
+        <path d="M3 6v12c0 1.657 4.03 3 9 3s9-1.343 9-3V6" />
+        <path d="M3 12c0 1.657 4.03 3 9 3s9-1.343 9-3" />
+        <path d="M12 6c0 3-4.03 3-9 3M12 6c0 3 4.03 3 9 3" opacity="0.5" />
+    </g>
+    <path d="M12 21V9" strokeDasharray="2 2" style={{ animation: 'data-flow 2s linear infinite' }} />
+  </svg>
+);
+
 export const UsersIcon: React.FC<{ className?: string }> = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" strokeLinejoin="miter" className={className}>
     <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
@@ -138,6 +163,31 @@ export const TargetIcon: React.FC<{ className?: string }> = ({ className }) => (
   </svg>
 );
 
+// Modern Animated Troubleshooting Icon
+export const ModernTroubleshootingIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <style>
+      {`
+        @keyframes scan-line {
+          0%, 100% { transform: translateY(-3px); }
+          50% { transform: translateY(3px); }
+        }
+        @keyframes lock-on {
+          0%, 100% { transform: scale(1); stroke-width: 1.5; }
+          50% { transform: scale(1.1); stroke-width: 2.5; }
+        }
+      `}
+    </style>
+    <circle cx="12" cy="12" r="9" strokeOpacity="0.2" />
+    <path d="M12 2v2M12 20v2M2 12h2M20 12h2" />
+    <g style={{ animation: 'scan-line 2.5s ease-in-out infinite' }}>
+        <line x1="7" y1="12" x2="17" y2="12" strokeOpacity="0.5" />
+    </g>
+    <circle cx="12" cy="12" r="3" style={{ animation: 'lock-on 1.5s ease-in-out infinite' }} />
+    <path d="M9 12h6M12 9v6" opacity="0.5" />
+  </svg>
+);
+
 export const RobotIcon: React.FC<{ className?: string }> = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" strokeLinejoin="miter" className={className}>
     <rect x="3" y="11" width="18" height="10" rx="0" />
@@ -145,6 +195,34 @@ export const RobotIcon: React.FC<{ className?: string }> = ({ className }) => (
     <path d="M12 7v4" />
     <line x1="8" y1="16" x2="8" y2="16" />
     <line x1="16" y1="16" x2="16" y2="16" />
+  </svg>
+);
+
+// Modern Animated AI Icon
+export const ModernAIIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <style>
+      {`
+        @keyframes orbit {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        @keyframes blink-spark {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.3; transform: scale(0.8); }
+        }
+      `}
+    </style>
+    <path d="M12 8V4m0 16v-4m-4-4H4m16 0h-4" opacity="0.2" />
+    <circle cx="12" cy="12" r="3" fill="currentColor" fillOpacity="0.1" />
+    <path d="M12 7c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5z" strokeDasharray="2 2" />
+    <g style={{ animation: 'orbit 8s linear infinite', transformOrigin: '12px 12px' }}>
+        <circle cx="12" cy="7" r="1.5" fill="currentColor" />
+        <circle cx="12" cy="17" r="1.5" fill="currentColor" />
+    </g>
+    <path d="M12 12m-6 0a6 6 0 1 0 12 0a6 6 0 1 0 -12 0" opacity="0.1" />
+    <path d="M12 2v20M2 12h20" strokeWidth="0.5" opacity="0.3" />
+    <circle cx="12" cy="12" r="1" fill="currentColor" style={{ animation: 'blink-spark 1s ease-in-out infinite' }} />
   </svg>
 );
 
