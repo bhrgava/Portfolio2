@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=JetBrains+Mono:wght@400;500&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #ffffff;
+        color: #334155;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+      
+      /* Risograph-inspired grain texture */
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAARlJREFUaAXt1rENwjAUhGGI27jTkE5QTuIm7uAwugYj6AAH6RgYkEAh/a3cK8l/dI/31/ZPkpKSkpKSAgD4e4y/fX291gMAAJ2G+1XWfgEAwM5C/a9s/QUAALsL9T+1/QIAgN2F+l/a/gEAwG5C/e/t/gEAwG5C/e/v/gEAwG5C/Q8AAkAANAAAAEAAACAAABAACAAAEAAACAAABAACAAAEAAACAAABAACAAAEAAACAAABAACAAAEAAACAAABAACAAAEAAACAAABAACAAAEAAACAAABAACAAAEAAACAAABAACAAAEAAACAAABAACAAABAACAAABAACAAABAACAAAKBq8u4XAJxR/b+u/gEAwJqC/X9e/gEAwKaC/QcAAaAAAACAAABAACAAABAACAAAkLqg7g0y0tLPAAAAAElFTkSuQmCC');
+        opacity: 0.08;
+        pointer-events: none;
+        z-index: 100;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: #0f172a;
+      }
+
+      .font-display {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      code, .font-mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+      
+      @keyframes draw-in {
+        from {
+            stroke-dashoffset: 500;
+        }
+        to {
+            stroke-dashoffset: 0;
+        }
+      }
+
+      @keyframes fade-scale-in {
+          from {
+              opacity: 0;
+              transform: scale(0.7);
+          }
+          to {
+              opacity: 1;
+              transform: scale(1);
+          }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1"
+  }
+}
+</script>
+</head>
+  <body class="bg-white text-slate-700">
+    <div id="root"></div>
+  </body>
+</html>
