@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { MailIcon, LinkedinIcon, LinkIcon, ArrowRightIcon, BriefcaseIcon } from './Icons';
+import { MailIcon, LinkedinIcon, LinkIcon, ArrowRightIcon, BriefcaseIcon, RobotIcon } from './Icons';
 
 interface AboutProps {
   onNavigate: (page: string) => void;
@@ -80,7 +80,7 @@ const CaseStudyCard: React.FC<{
 }> = ({ onClick, caseNumber, title, description, client }) => (
     <button 
         onClick={onClick} 
-        className="group text-left bg-white rounded-lg transition-all duration-200 relative p-8 shadow-[4px_4px_0px_0px_rgba(236,72,153,1),8px_8px_0px_0px_rgba(37,99,235,1)] hover:shadow-[2px_2px_0px_0px_rgba(236,72,153,1),4px_4px_0px_0px_rgba(37,99,235,1)] hover:-translate-x-1 hover:-translate-y-1 border-2 border-slate-900"
+        className="group text-left bg-white rounded-lg transition-all duration-200 relative p-8 shadow-[4px_4px_0px_0px_rgba(236,72,153,1),8px_8px_0px_0px_rgba(37,99,235,1)] hover:shadow-[2px_2px_0px_0px_rgba(236,72,153,1),4px_4px_0px_0px_rgba(37,99,235,1)] hover:-translate-x-1 hover:-translate-y-1 border-2 border-slate-900 h-full flex flex-col justify-between"
     >
         <div>
             <div className="flex justify-between items-center mb-2">
@@ -92,6 +92,29 @@ const CaseStudyCard: React.FC<{
         </div>
         <div className="flex items-center gap-2 mt-6 text-blue-600 text-xs font-mono uppercase tracking-widest font-bold">
             <span>View Case</span>
+            <ArrowRightIcon className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+        </div>
+    </button>
+);
+
+const LabsCard: React.FC<{ onClick: () => void }> = ({ onClick }) => (
+    <button 
+        onClick={onClick} 
+        className="group text-left bg-white rounded-lg transition-all duration-200 relative p-8 shadow-[4px_4px_0px_0px_rgba(236,72,153,1),8px_8px_0px_0px_rgba(147,51,234,1)] hover:shadow-[2px_2px_0px_0px_rgba(236,72,153,1),4px_4px_0px_0px_rgba(147,51,234,1)] hover:-translate-x-1 hover:-translate-y-1 border-2 border-slate-900 h-full flex flex-col justify-between overflow-hidden"
+    >
+        <div className="absolute -top-4 -right-4 opacity-5 group-hover:opacity-10 transition-opacity">
+            <RobotIcon className="w-32 h-32 text-slate-900" />
+        </div>
+        <div className="relative z-10">
+            <div className="flex justify-between items-center mb-2">
+                <span className={`text-[10px] font-mono text-purple-600 uppercase tracking-widest block font-bold`}>Experimental Lab</span>
+                <span className="text-[10px] font-mono bg-purple-50 text-purple-600 px-2 py-1 rounded-sm border border-purple-100">R&D</span>
+            </div>
+            <span className="text-2xl font-bold text-slate-900">AI Labs</span>
+            <p className="text-slate-500 mt-3 font-light leading-snug">A collection of experiments using AI at various stages of a research study—from literature reviews to automated reporting.</p>
+        </div>
+        <div className="flex items-center gap-2 mt-6 text-purple-600 text-xs font-mono uppercase tracking-widest font-bold relative z-10">
+            <span>Enter Lab</span>
             <ArrowRightIcon className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
         </div>
     </button>
@@ -234,7 +257,7 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
                   </button>
 
                   {/* Other Case Studies */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                       <CaseStudyCard
                           onClick={() => onNavigate('spanner')}
                           caseNumber="01"
@@ -256,6 +279,7 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
                           description="Reframing the customer definition from 'Who' to 'What'."
                           client="Google Cloud"
                       />
+                      <LabsCard onClick={() => onNavigate('labs')} />
                   </div>
               </div>
           </section>
